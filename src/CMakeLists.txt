@@ -193,7 +193,7 @@ endif()
 
 add_executable(rtl_433 rtl_433.c)
 target_link_libraries(rtl_433 r_433)
-
+target_link_libraries(rtl_433 ssl crypto)
 if(MSVC)
     # needs CMake 3.1 but Windows builds should have that
     target_sources(rtl_433 PRIVATE getopt/getopt.c)
